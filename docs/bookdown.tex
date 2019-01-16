@@ -176,7 +176,7 @@
 
 \title{Advanced Big Data Analytics for Business with R}
 \author{Sanjeev Kumar}
-\date{2018-12-19}
+\date{2019-01-15}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -565,6 +565,8 @@ Ross School of Business, Univ. of Michigan, Ann Arbor.
 \includegraphics[width=2.60417in]{images/SanjeevKumar.jpg} \{-\}
 
 \mainmatter
+
+\part{Getting Started}\label{part-getting-started}
 
 \chapter{Introduction}\label{introduction}
 
@@ -1320,6 +1322,154 @@ for a division operation.
 ## [1] 1
 \end{verbatim}
 
+\section{Variables}\label{variables}
+
+R keeps all data in \textbf{Variables}. Variables can be thought of as a
+space in computer's memory where R can store data. Once we have created
+a variable, we can then use the variable name to access, manipulate and
+work with the data kept in the variable. You can assign a value to the
+variables using the \textbf{Assignment Operator} written as
+\texttt{\textless{}-}. The arrow indicates the direction of assignment.
+Operators also exist to do assignment in the opposite direction
+\texttt{-\textgreater{}} and do the same operation as assignment
+operator. R also supports the assignment operator command used by many
+other programming languages \texttt{=}, but it is customary to use the
+right-to-left version of assignment operator. \footnote{I find the R
+  version of assignment operator to be much more intuitive as the
+  direction of value assignment is clearly specified. The \texttt{=}
+  charater usually confuses beginners into thinking that we are
+  ``equating'' values instead of the correct interpretation of
+  ``assigning'' value from one side to the other.}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{revenue <-}\StringTok{ }\DecValTok{100} \CommentTok{#Typical way of creating a variable and assigning value}
+\CommentTok{# Above is the recommended approach}
+\NormalTok{revenue =}\StringTok{ }\DecValTok{100} \CommentTok{#Alternate way of doing same as above}
+\CommentTok{#100 -> revenue #Reverse direction assignment}
+\NormalTok{revenue <-}\StringTok{ }\NormalTok{revenue }\OperatorTok{+}\StringTok{ }\DecValTok{300} \CommentTok{#Performing calculations}
+\KeywordTok{print}\NormalTok{(revenue) }\CommentTok{#Printing/showing the value inside the variable}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 400
+\end{verbatim}
+
+The first three line of the code above should be read as the value 100
+is assigned to the variable named \texttt{revenue}. In the fourth line,
+we add 300 to the current value of variable \texttt{revenue} and the
+resulting value (in this case 400) is then assigned to the variable
+\texttt{revenue}. So the value in the variable \texttt{revenue} is now
+400, which is shown as output in the last line.
+
+A numeric variable like \texttt{revenue} above can be used just like a
+number to perform all usual arithmetic operations.
+
+\section{Variable Data Types}\label{variable-data-types}
+
+Variables can store different types of data. We saw integer numerical
+data in the examples above. Other common data types include floating
+point numbers (fractional numbers), characters data (i.e.~a single
+character), text data (called strings - as in string of characters) and
+logical data (true or false). We can find the data type of a variable by
+using the \texttt{class} command.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{numvalue <-}\StringTok{ }\FloatTok{20.56} \CommentTok{#Creating a numeric variable}
+\KeywordTok{class}\NormalTok{(numvalue) }\CommentTok{#Finding data type of numvalue variable}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "numeric"
+\end{verbatim}
+
+\subsection{Numeric Data}\label{numeric-data}
+
+Variables of numeric data type can store both integers and floating
+point values. Unlike many programming languages, R does not have various
+different kinds of integers and floating point numbers defined to
+optimize memory usage.
+
+\subsection{String Data}\label{string-data}
+
+\textbf{String} or text data \footnote{Text is nothing but a string of
+  characters, hence the name String} is written within quote marks
+\texttt{"\ "} to differentiate them from text that represent things like
+object names. An empty string (a text data with no characters) is
+usually represented by two quote marks with nothing within - like
+\texttt{""}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{day.name <-}\StringTok{ "Sunday"} \CommentTok{#Assigns the string Sunday to variable day.name}
+\NormalTok{someday <-}\StringTok{ ""} \CommentTok{#Empty string assigned to variable someday}
+\end{Highlighting}
+\end{Shaded}
+
+String is a very useful data type as all other types of data can be
+saved as a string. For example - we can save numeric data (``23.37''),
+date data (``12/27/1976''), logical data (``TRUE'') etc. all as string.
+R has several useful commands for working with string data. You can
+connect two strings together using the \textbf{String Concatenation}
+function \textbf{\texttt{paste}}. You can calculate the number of
+characters in a string using the \textbf{\texttt{nchar}} function. Many
+other strings related commands are discussed later in this book.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{nchar}\NormalTok{(day.name); }\KeywordTok{nchar}\NormalTok{(someday)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 6
+\end{verbatim}
+
+\begin{verbatim}
+## [1] 0
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{message <-}\StringTok{ }\KeywordTok{paste}\NormalTok{(day.name, }\StringTok{" is a great day!"}\NormalTok{); message}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "Sunday  is a great day!"
+\end{verbatim}
+
+\section{Logical Data}\label{logical-data}
+
+Variables can hold logical values using the two keywords \texttt{TRUE}
+and \texttt{FALSE}. Logical values typically result from the use of
+logical operators such as the equality operator \texttt{==}. Note the
+two \texttt{=} signs there which differetiates it from the version of
+assignment operator we saw before.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{4} \OperatorTok{==}\StringTok{ }\DecValTok{6} \CommentTok{#Is 4 equal to 6, result FALSE}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] FALSE
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{someday }\OperatorTok{==}\StringTok{ "Tuesday"} \CommentTok{#Again result shoukd be FALSE}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] FALSE
+\end{verbatim}
+
 \section{Logical Operators}\label{logical-operators}
 
 Just as arithmatic expressions evaluate to a numerical result, logical
@@ -1439,153 +1589,6 @@ experiment: 1000 \textgreater{} 50: True or False? ``1000''
 \begin{Shaded}
 \begin{Highlighting}[]
 \StringTok{"1000"} \OperatorTok{>}\StringTok{ "50"}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## [1] FALSE
-\end{verbatim}
-
-\section{Variables}\label{variables}
-
-R keeps all data in \textbf{Variables}. Variables can be thought of as a
-space in computer's memory where R can store data. Once we have created
-a variable, we can then use the variable name to access, manipulate and
-work with the data kept in the variable. Variables are created using the
-\textbf{Assignment Operator} written as \texttt{\textless{}-}. The arrow
-indicates the direction of assignment. Operators also exist to do
-assignment in the opposite direction \texttt{-\textgreater{}} and do the
-same operation as assignment operator. R also supports the assignment
-operator command used by many other programming languages \texttt{=},
-but it is customary to use the right-to-left version of assignment
-operator. \footnote{I find the R version of assignment operator to be
-  much more intuitive as the direction of value assignment is clearly
-  specified. The \texttt{=} charater usually confuses beginners into
-  thinking that we are ``equating'' values instead of the correct
-  interpretation of ``assigning'' value from one side to the other.}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{revenue <-}\StringTok{ }\DecValTok{100} \CommentTok{#Typical way of creating a variable and assigning value}
-\CommentTok{# Above is the recommended approach}
-\NormalTok{revenue =}\StringTok{ }\DecValTok{100} \CommentTok{#Alternate way of doing same as above}
-\CommentTok{#100 -> revenue #Reverse direction assignment}
-\NormalTok{revenue <-}\StringTok{ }\NormalTok{revenue }\OperatorTok{+}\StringTok{ }\DecValTok{300} \CommentTok{#Performing calculations}
-\KeywordTok{print}\NormalTok{(revenue) }\CommentTok{#Printing/showing the value inside the variable}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## [1] 400
-\end{verbatim}
-
-The first three line of the code above should be read as the value 100
-is assigned to the variable \texttt{revenue}. In the fourth line, we add
-300 to the current value of variable \texttt{revenue} and the resulting
-value (in this case 400) is then assigned to the variable
-\texttt{revenue}. So the value in the variable \texttt{revenue} is now
-400, which is shown as output in the last line.
-
-A numeric variable like \texttt{revenue} above can be used just like a
-number to perform all usual arithmetic operations.
-
-\section{Variable Data Types}\label{variable-data-types}
-
-Variables can store different types of data. We saw integer numerical
-data in the examples above. Other common data types include floating
-point numbers (fractional numbers), characters data (i.e.~a single
-character), text data (called strings - as in string of characters) and
-logical data (true or false). We can find the data type of a variable by
-using the \texttt{class} command.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{numvalue <-}\StringTok{ }\FloatTok{20.56} \CommentTok{#Creating a numeric variable}
-\KeywordTok{class}\NormalTok{(numvalue) }\CommentTok{#Finding data type of numvalue variable}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## [1] "numeric"
-\end{verbatim}
-
-\subsection{Numeric Data}\label{numeric-data}
-
-Variables of numeric data type can store both integers and floating
-point values. Unlike many programming languages, R does not have various
-different kinds of integers and floating point numbers defined to
-optimize memory usage.
-
-\subsection{String Data}\label{string-data}
-
-\textbf{String} or text data \footnote{Text is nothing but a string of
-  characters, hence the name String} is written within quote marks
-\texttt{"\ "} to differentiate them from text that represent things like
-object names. An empty string (a text data with no characters) is
-usually represented by two quote marks with nothing within - like
-\texttt{""}.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{day.name <-}\StringTok{ "Sunday"} \CommentTok{#Assigns the string Sunday to variable day.name}
-\NormalTok{someday <-}\StringTok{ ""} \CommentTok{#Empty string assigned to variable someday}
-\end{Highlighting}
-\end{Shaded}
-
-String is a very useful data type as all other types of data can be
-saved as a string. For example - we can save numeric data (``23.37''),
-date data (``12/27/1976''), logical data (``TRUE'') etc. all as string.
-R has several useful commands for working with string data. You can
-connect two strings together using the \textbf{String Concatenation}
-function \textbf{\texttt{paste}}. You can calculate the number of
-characters in a string using the \textbf{\texttt{nchar}} function. Many
-other strings related commands are discussed later in this book.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{nchar}\NormalTok{(day.name); }\KeywordTok{nchar}\NormalTok{(someday)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## [1] 6
-\end{verbatim}
-
-\begin{verbatim}
-## [1] 0
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{message <-}\StringTok{ }\KeywordTok{paste}\NormalTok{(day.name, }\StringTok{" is a great day!"}\NormalTok{); message}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## [1] "Sunday  is a great day!"
-\end{verbatim}
-
-\section{Logical Data}\label{logical-data}
-
-Variables can hold logical values using the two keywords \texttt{TRUE}
-and \texttt{FALSE}. Logical values typically result from the use of
-logical operators such as the equality operator \texttt{==}. Note the
-two \texttt{=} signs there which differetiates it from the version of
-assignment operator we saw before.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\DecValTok{4} \OperatorTok{==}\StringTok{ }\DecValTok{6} \CommentTok{#Is 4 equal to 6, result FALSE}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## [1] FALSE
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{someday }\OperatorTok{==}\StringTok{ "Tuesday"} \CommentTok{#Again result shoukd be FALSE}
 \end{Highlighting}
 \end{Shaded}
 
