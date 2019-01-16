@@ -1,0 +1,31 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+\mainmatter
+
+# Introduction
+
+Welcome to **Advanced Big Data Analytics for Business with R**. Let's get started.
+
+
+
+## Archive - Delete
+
+This section holds the placeholder information that will be deleted after the book is built.
+
+We have a nice figure in Figure \@ref(fig:hello), and also a table in Table \@ref(tab:iris).
+
+```{r hello, fig.cap='Hello World!', out.width='90%'}
+par(mar = c(4, 4, 1, .1))
+plot(cars, pch = 19)
+```
+
+```{r iris}
+knitr::kable(
+  head(iris), caption = 'The boring iris data.',
+  booktabs = TRUE
+)
+```
+

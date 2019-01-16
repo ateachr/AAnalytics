@@ -1,0 +1,13 @@
+\cleardoublepage 
+
+# (APPENDIX) Appendix {-}
+
+# Syllabi
+
+This appendix will have the syllabus for the relevant Ross courses.
+
+## TO404 Big Data Manipulation and Visualization
+
+## TO414 Advanced Analytics
+
+## TO628 Advanced Big Data Analytics
