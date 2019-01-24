@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Advanced Big Data Analytics for Business with R</title>
+  <meta name="description" content="A book to support Big Data classes by Sanjeev Kumar at Ross School of Business, Univ of Michigan.">
+  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Advanced Big Data Analytics for Business with R" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="A book to support Big Data classes by Sanjeev Kumar at Ross School of Business, Univ of Michigan." />
+  <meta name="github-repo" content="ateachr/ABDA4BwR" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Advanced Big Data Analytics for Business with R" />
+  
+  <meta name="twitter:description" content="A book to support Big Data classes by Sanjeev Kumar at Ross School of Business, Univ of Michigan." />
+  
+
+<meta name="author" content="Sanjeev Kumar">
+
+
+<meta name="date" content="2019-01-24">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="about-this-document.html">
+<link rel="next" href="how-to-read-this-book.html">
+<script src="libs/jquery/jquery.min.js"></script>
+<link href="libs/gitbook/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./index.html">Advanced Big Data Analytics</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Go Blue!</a></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="" data-path="who-is-this-book-for.html"><a href="who-is-this-book-for.html"><i class="fa fa-check"></i>Who Is This Book For?</a></li>
+<li class="chapter" data-level="" data-path="about-this-document.html"><a href="about-this-document.html"><i class="fa fa-check"></i>About This Document</a></li>
+<li class="chapter" data-level="" data-path="how-is-this-book-structured.html"><a href="how-is-this-book-structured.html"><i class="fa fa-check"></i>How is This Book Structured</a></li>
+<li class="chapter" data-level="" data-path="how-to-read-this-book.html"><a href="how-to-read-this-book.html"><i class="fa fa-check"></i>How to Read This Book</a></li>
+<li class="chapter" data-level="" data-path="is-this-book-suitable-for-you.html"><a href="is-this-book-suitable-for-you.html"><i class="fa fa-check"></i>Is This Book Suitable For You?</a></li>
+<li class="chapter" data-level="" data-path="acknowledgments.html"><a href="acknowledgments.html"><i class="fa fa-check"></i>Acknowledgments</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="about-the-author.html"><a href="about-the-author.html"><i class="fa fa-check"></i>About the Author</a></li>
+<li class="part"><span><b>I Getting Started</b></span></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="our-tools-r-rstudio.html"><a href="our-tools-r-rstudio.html"><i class="fa fa-check"></i><b>2</b> Our Tools: R, RStudio</a><ul>
+<li class="chapter" data-level="2.1" data-path="introduction-to-r-and-rstudio.html"><a href="introduction-to-r-and-rstudio.html"><i class="fa fa-check"></i><b>2.1</b> Introduction to R and RStudio</a></li>
+<li class="chapter" data-level="2.2" data-path="useful-features-of-rstudio.html"><a href="useful-features-of-rstudio.html"><i class="fa fa-check"></i><b>2.2</b> Useful Features of RStudio</a></li>
+<li class="chapter" data-level="2.3" data-path="key-features-of-rrstudio-ecosystem.html"><a href="key-features-of-rrstudio-ecosystem.html"><i class="fa fa-check"></i><b>2.3</b> Key Features of R/RStudio Ecosystem</a></li>
+<li class="chapter" data-level="2.4" data-path="common-issues-pitfalls-bugs-obstacles-and-their-solutions.html"><a href="common-issues-pitfalls-bugs-obstacles-and-their-solutions.html"><i class="fa fa-check"></i><b>2.4</b> Common Issues, Pitfalls, Bugs, Obstacles and Their Solutions</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="essential-r-language-elements.html"><a href="essential-r-language-elements.html"><i class="fa fa-check"></i><b>3</b> Essential R Language Elements</a><ul>
+<li class="chapter" data-level="3.1" data-path="doing-calculations-arithmatic-operators.html"><a href="doing-calculations-arithmatic-operators.html"><i class="fa fa-check"></i><b>3.1</b> Doing Calculations - Arithmatic Operators</a></li>
+<li class="chapter" data-level="3.2" data-path="variables.html"><a href="variables.html"><i class="fa fa-check"></i><b>3.2</b> Variables</a></li>
+<li class="chapter" data-level="3.3" data-path="variable-data-types.html"><a href="variable-data-types.html"><i class="fa fa-check"></i><b>3.3</b> Variable Data Types</a></li>
+<li class="chapter" data-level="3.4" data-path="logical-data.html"><a href="logical-data.html"><i class="fa fa-check"></i><b>3.4</b> Logical Data</a></li>
+<li class="chapter" data-level="3.5" data-path="logical-operators.html"><a href="logical-operators.html"><i class="fa fa-check"></i><b>3.5</b> Logical Operators</a></li>
+<li class="chapter" data-level="3.6" data-path="converting-between-data-types.html"><a href="converting-between-data-types.html"><i class="fa fa-check"></i><b>3.6</b> Converting Between Data Types</a></li>
+<li class="chapter" data-level="3.7" data-path="vectors.html"><a href="vectors.html"><i class="fa fa-check"></i><b>3.7</b> Vectors</a></li>
+<li class="chapter" data-level="3.8" data-path="factors.html"><a href="factors.html"><i class="fa fa-check"></i><b>3.8</b> Factors</a></li>
+<li class="chapter" data-level="3.9" data-path="using-built-in-functions.html"><a href="using-built-in-functions.html"><i class="fa fa-check"></i><b>3.9</b> Using Built-In Functions</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="r-markdown.html"><a href="r-markdown.html"><i class="fa fa-check"></i><b>4</b> R Markdown</a><ul>
+<li class="chapter" data-level="4.1" data-path="embedding-r-code-blocks-in-rmd-files.html"><a href="embedding-r-code-blocks-in-rmd-files.html"><i class="fa fa-check"></i><b>4.1</b> Embedding R Code Blocks in RMD Files</a></li>
+<li class="chapter" data-level="4.2" data-path="reproducibility-of-data-analysis.html"><a href="reproducibility-of-data-analysis.html"><i class="fa fa-check"></i><b>4.2</b> Reproducibility of Data Analysis</a></li>
+</ul></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="syllabi.html"><a href="syllabi.html"><i class="fa fa-check"></i><b>A</b> Syllabi</a><ul>
+<li class="chapter" data-level="A.1" data-path="to404-big-data-manipulation-and-visualization.html"><a href="to404-big-data-manipulation-and-visualization.html"><i class="fa fa-check"></i><b>A.1</b> TO404 Big Data Manipulation and Visualization</a></li>
+<li class="chapter" data-level="A.2" data-path="to414-advanced-analytics.html"><a href="to414-advanced-analytics.html"><i class="fa fa-check"></i><b>A.2</b> TO414 Advanced Analytics</a></li>
+<li class="chapter" data-level="A.3" data-path="to628-advanced-big-data-analytics.html"><a href="to628-advanced-big-data-analytics.html"><i class="fa fa-check"></i><b>A.3</b> TO628 Advanced Big Data Analytics</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Advanced Big Data Analytics for Business with R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="how-is-this-book-structured" class="section level2 unnumbered">
+<h2>How is This Book Structured</h2>
+<p>This book covers a wide range of material. The material is organized in 5 parts, 19 chapters and several appendices.</p>
+<div id="part-i-getting-started" class="section level3 unnumbered">
+<h3>Part I: Getting Started</h3>
+<p>We set ourselves for the book - download and install all needed software; figure our way around R and RStudio and learn the basics of the R language. Essentially lay down enough of a foundation that we can start getting productive. For students without a computer programming background, it is essential that they do not rush this part. Our success in later parts depend upon us getting comfortable with the material here.</p>
+</div>
+<div id="part-ii-data-exploration-and-visualization" class="section level3 unnumbered">
+<h3>Part II: Data Exploration and Visualization</h3>
+<p>Real data analytics begins with us understanding and getting a handle on the data. This typically involves cleaning up the data, generating descriptive statistics to better understand the data and finally creating visualizations that allow us to better understand the underlying complexity of the data. In my opinion, data cleaning is the most under-appreciated part of data analytics. It often takes more time and effort than the actual analysis that follows.</p>
+<p>Data visualization has emerged as a key tool in Big Data Analytics. We specifically focus our attention here on a subset of data visualization that is important in the business context - creating data dashboards that can help managerial decision making.</p>
+</div>
+<div id="part-iii-traditional-statistical-modeling" class="section level3 unnumbered">
+<h3>Part III: Traditional Statistical Modeling</h3>
+<p>Even advanced analytic techniques like machine learning algorithms in the next part have their foundations in traditional statistical methodologies. Classical statistical modeling approaches like Linear Regression are still the benchmark given their immense popularity, flexibility and stability. In this part of the book, we explore traditional statistical analysis tools like Linear Regression, Generalized Linear Models like Logistic and Survival Models, Principal Components and Factor Analysis, Time Series Analysis and so on.</p>
+<p>As we assume that you are already familiar with basic probability and statistics, we will focus on application of the methodologies and not the underlying theory. We will also focus on how to tweak these tools for the Big Data world as many of these tools run into trouble when sample sizes are quite large. Bigger is not always better - traditional statisticall methodologies were developed/optimized for smaller sample sizes. Using them for large sample sizes give rise to unique issues and problems - we will discuss how to address them.</p>
+</div>
+<div id="part-iv-machine-learning-and-predictive-analytics" class="section level3 unnumbered">
+<h3>Part IV: Machine Learning and Predictive Analytics</h3>
+<p>This is the largest and the most important part of the book. This is why this book was written in the first place - an overview of data analytics tools specific to Big Data - variously known as Machine Learning, Statistical Learning, Predictive Analytics, Data Mining as so on. This book focuses on tools that help us make sense of Big Data and helps us automate the extraction of managerial decision making insights from Big Data.</p>
+<p>As with much of the rest of the book, the focus is on applying the tools rather than their theoretical/mathematical underpinnings. We will discuss enough theory to develop an overall understanding and then devote our energies on making these tools work on real datasets.</p>
+</div>
+<div id="part-v-putting-it-all-together" class="section level3 unnumbered">
+<h3>Part V: Putting It All Together</h3>
+<p>Now that we have gone through all the elements individually, we can move forward to create a combined, integrated approach that puts all these pieces together. How to combine different models so that they result in an output better than sum of their parts? How to ensure that our models improve as more data become available?</p>
+</div>
+<div id="part-vi-appendices-bibliography-and-index" class="section level3 unnumbered">
+<h3>Part VI: Appendices, Bibliography and Index</h3>
+<p>Back matter of the book. The Index in the end has three main components - Key Concepts, R Commands and R Packages. Appendices include syllabus for the courses this book is primarily used for and other miscellaneous content that did not fit in one of the main matter chapters. The index is only available in the PDF format of the book.</p>
+<p>There are a lot of quality, free, online resources available for building up your R and Data Analytics skills before you go through this book or the associated courses. They are listed in Appendix: Key References. A fully fleshed data analysis example has been presented on Appendix: Data Analysis Example to give you an idea of the power and range of what can be accomplished with just a little bit of familiarity with R.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="about-this-document.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="how-to-read-this-book.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook/js/app.min.js"></script>
+<script src="libs/gitbook/js/lunr.js"></script>
+<script src="libs/gitbook/js/plugin-search.js"></script>
+<script src="libs/gitbook/js/plugin-sharing.js"></script>
+<script src="libs/gitbook/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/clarifyR/AABookDown/edit/master/index.Rmd",
+"text": "Edit"
+},
+"download": ["bookdown.pdf"],
+"toc": {
+"collapse": "none"
+},
+"toc_depth": 2
+});
+});
+</script>
+
+</body>
+
+</html>

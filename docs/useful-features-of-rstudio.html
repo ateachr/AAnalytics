@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Advanced Big Data Analytics for Business with R</title>
+  <meta name="description" content="A book to support Big Data classes by Sanjeev Kumar at Ross School of Business, Univ of Michigan.">
+  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Advanced Big Data Analytics for Business with R" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="A book to support Big Data classes by Sanjeev Kumar at Ross School of Business, Univ of Michigan." />
+  <meta name="github-repo" content="ateachr/ABDA4BwR" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Advanced Big Data Analytics for Business with R" />
+  
+  <meta name="twitter:description" content="A book to support Big Data classes by Sanjeev Kumar at Ross School of Business, Univ of Michigan." />
+  
+
+<meta name="author" content="Sanjeev Kumar">
+
+
+<meta name="date" content="2019-01-24">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="introduction-to-r-and-rstudio.html">
+<link rel="next" href="key-features-of-rrstudio-ecosystem.html">
+<script src="libs/jquery/jquery.min.js"></script>
+<link href="libs/gitbook/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./index.html">Advanced Big Data Analytics</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Go Blue!</a></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="" data-path="who-is-this-book-for.html"><a href="who-is-this-book-for.html"><i class="fa fa-check"></i>Who Is This Book For?</a></li>
+<li class="chapter" data-level="" data-path="about-this-document.html"><a href="about-this-document.html"><i class="fa fa-check"></i>About This Document</a></li>
+<li class="chapter" data-level="" data-path="how-is-this-book-structured.html"><a href="how-is-this-book-structured.html"><i class="fa fa-check"></i>How is This Book Structured</a></li>
+<li class="chapter" data-level="" data-path="how-to-read-this-book.html"><a href="how-to-read-this-book.html"><i class="fa fa-check"></i>How to Read This Book</a></li>
+<li class="chapter" data-level="" data-path="is-this-book-suitable-for-you.html"><a href="is-this-book-suitable-for-you.html"><i class="fa fa-check"></i>Is This Book Suitable For You?</a></li>
+<li class="chapter" data-level="" data-path="acknowledgments.html"><a href="acknowledgments.html"><i class="fa fa-check"></i>Acknowledgments</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="about-the-author.html"><a href="about-the-author.html"><i class="fa fa-check"></i>About the Author</a></li>
+<li class="part"><span><b>I Getting Started</b></span></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="our-tools-r-rstudio.html"><a href="our-tools-r-rstudio.html"><i class="fa fa-check"></i><b>2</b> Our Tools: R, RStudio</a><ul>
+<li class="chapter" data-level="2.1" data-path="introduction-to-r-and-rstudio.html"><a href="introduction-to-r-and-rstudio.html"><i class="fa fa-check"></i><b>2.1</b> Introduction to R and RStudio</a></li>
+<li class="chapter" data-level="2.2" data-path="useful-features-of-rstudio.html"><a href="useful-features-of-rstudio.html"><i class="fa fa-check"></i><b>2.2</b> Useful Features of RStudio</a></li>
+<li class="chapter" data-level="2.3" data-path="key-features-of-rrstudio-ecosystem.html"><a href="key-features-of-rrstudio-ecosystem.html"><i class="fa fa-check"></i><b>2.3</b> Key Features of R/RStudio Ecosystem</a></li>
+<li class="chapter" data-level="2.4" data-path="common-issues-pitfalls-bugs-obstacles-and-their-solutions.html"><a href="common-issues-pitfalls-bugs-obstacles-and-their-solutions.html"><i class="fa fa-check"></i><b>2.4</b> Common Issues, Pitfalls, Bugs, Obstacles and Their Solutions</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="essential-r-language-elements.html"><a href="essential-r-language-elements.html"><i class="fa fa-check"></i><b>3</b> Essential R Language Elements</a><ul>
+<li class="chapter" data-level="3.1" data-path="doing-calculations-arithmatic-operators.html"><a href="doing-calculations-arithmatic-operators.html"><i class="fa fa-check"></i><b>3.1</b> Doing Calculations - Arithmatic Operators</a></li>
+<li class="chapter" data-level="3.2" data-path="variables.html"><a href="variables.html"><i class="fa fa-check"></i><b>3.2</b> Variables</a></li>
+<li class="chapter" data-level="3.3" data-path="variable-data-types.html"><a href="variable-data-types.html"><i class="fa fa-check"></i><b>3.3</b> Variable Data Types</a></li>
+<li class="chapter" data-level="3.4" data-path="logical-data.html"><a href="logical-data.html"><i class="fa fa-check"></i><b>3.4</b> Logical Data</a></li>
+<li class="chapter" data-level="3.5" data-path="logical-operators.html"><a href="logical-operators.html"><i class="fa fa-check"></i><b>3.5</b> Logical Operators</a></li>
+<li class="chapter" data-level="3.6" data-path="converting-between-data-types.html"><a href="converting-between-data-types.html"><i class="fa fa-check"></i><b>3.6</b> Converting Between Data Types</a></li>
+<li class="chapter" data-level="3.7" data-path="vectors.html"><a href="vectors.html"><i class="fa fa-check"></i><b>3.7</b> Vectors</a></li>
+<li class="chapter" data-level="3.8" data-path="factors.html"><a href="factors.html"><i class="fa fa-check"></i><b>3.8</b> Factors</a></li>
+<li class="chapter" data-level="3.9" data-path="using-built-in-functions.html"><a href="using-built-in-functions.html"><i class="fa fa-check"></i><b>3.9</b> Using Built-In Functions</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="r-markdown.html"><a href="r-markdown.html"><i class="fa fa-check"></i><b>4</b> R Markdown</a><ul>
+<li class="chapter" data-level="4.1" data-path="embedding-r-code-blocks-in-rmd-files.html"><a href="embedding-r-code-blocks-in-rmd-files.html"><i class="fa fa-check"></i><b>4.1</b> Embedding R Code Blocks in RMD Files</a></li>
+<li class="chapter" data-level="4.2" data-path="reproducibility-of-data-analysis.html"><a href="reproducibility-of-data-analysis.html"><i class="fa fa-check"></i><b>4.2</b> Reproducibility of Data Analysis</a></li>
+</ul></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="syllabi.html"><a href="syllabi.html"><i class="fa fa-check"></i><b>A</b> Syllabi</a><ul>
+<li class="chapter" data-level="A.1" data-path="to404-big-data-manipulation-and-visualization.html"><a href="to404-big-data-manipulation-and-visualization.html"><i class="fa fa-check"></i><b>A.1</b> TO404 Big Data Manipulation and Visualization</a></li>
+<li class="chapter" data-level="A.2" data-path="to414-advanced-analytics.html"><a href="to414-advanced-analytics.html"><i class="fa fa-check"></i><b>A.2</b> TO414 Advanced Analytics</a></li>
+<li class="chapter" data-level="A.3" data-path="to628-advanced-big-data-analytics.html"><a href="to628-advanced-big-data-analytics.html"><i class="fa fa-check"></i><b>A.3</b> TO628 Advanced Big Data Analytics</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Advanced Big Data Analytics for Business with R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="useful-features-of-rstudio" class="section level2">
+<h2><span class="header-section-number">2.2</span> Useful Features of RStudio</h2>
+<div id="console" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> Console</h3>
+<p>The console is where you can interact directly with the R system. You can write one line at a time and immediately execute it there by pressing enter. If you wish to write more than one command in one line then you can separate the commands using the semi-colon character. The console is essentially an R session running inside RStudio. The console shows a command prompt (usually the <code>&gt;</code>}) character to indicate that you can type there. You can change the prompt by changing the options setting.<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></p>
+</div>
+<div id="editor" class="section level3">
+<h3><span class="header-section-number">2.2.2</span> Editor</h3>
+<p>The editor is where you can work on and edit all of your files. This is a pure text editor - so no formatting of any kind. You will mostly be working with RMD files here. The tab panel at the top of the editor allows you to work on multiple files at once. The editor window is hidden when you start RStudio as you usually don’t have a file to edit when you begin. Once you create/open a new file then they will open in the editor window and you can edit them. The editor window helpfully shows you the line numbers in left column and the cursor positioning in the line at the bottom left corner. The bottom right corner shows you the file type that you are working on. There are usual icons for saving a file, finding, spell check etc on the top bar. See Figure:  for an example.</p>
+<div class="figure">
+<img src="images/editor.png" alt="RStudio Editor Window" />
+<p class="caption">RStudio Editor Window</p>
+</div>
+</div>
+<div id="environment" class="section level3">
+<h3><span class="header-section-number">2.2.3</span> Environment</h3>
+<p>The Environment tab shows you all of the variables currently stored in memory and what their values are.We haven’t said what variables are as yet. Hold on - its coming in the next chapter. The tab in fact shows all the objects that currently exist in your R session. Objects will be discussed very soon, later in this chapter. Environment tab is a very useful place to have a quick look at the state of your current R session. The environment tab has a handy broom icon for deleting all the objects that exist and clearning your environment. You can, of course, do that using a command as well - <strong><code>rm</code></strong> for remove or delete. The command <strong><code>ls</code></strong> generates a list of all the objects in the environment. We can combine the two to delete every object in the environment if we so choose:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rm</span>(<span class="dt">list =</span> <span class="kw">ls</span>()) <span class="co">#Delete every object in the environment</span></code></pre></div>
+</div>
+<div id="history" class="section level3">
+<h3><span class="header-section-number">2.2.4</span> History</h3>
+<p>The History tab shows you the history of all the commands you have entered in the Console window. You can use available icons on top to search through the history or delete items from the history. Two very useful icons are for transferring commands to the console and to the source. See details in figure below. . The <code>To Console</code> option allows you to select one or more commands from the history and transfers them to the Console window where you can run them by pressing Enter. The <code>To Source</code> option sends the selected commands to the Editor window, to the currently open and active file.</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-5"></span>
+<img src="images/history.png" alt="RStudio History Window" width="50%" />
+<p class="caption">
+FIGURE 2.1: RStudio History Window
+</p>
+</div>
+</div>
+<div id="files" class="section level3">
+<h3><span class="header-section-number">2.2.5</span> Files</h3>
+<p>The Files tab allows you to navigate through your filesystem, making it easy to load files into Rstudio. It shows the content of the current working directory when RStudio starts. You can navigate through the file system of your machine using the available options. The top icons provide ability to create a new folder, delete selected files, rename selected files and refresh file listings. The <code>More</code> option reveals further functionalities including two useful ones: the ability to set the currently displayed directory as the working directory and the ability to get the Files tab to display the contents of the current working directory. Figure: shows the options.</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-6"></span>
+<img src="images/files.png" alt="RStudio Files Tab" width="50%" />
+<p class="caption">
+FIGURE 2.2: RStudio Files Tab
+</p>
+</div>
+</div>
+<div id="plots" class="section level3">
+<h3><span class="header-section-number">2.2.6</span> Plots</h3>
+<p>the Plots tab shows the plots generated by the commands typed in the Console. See figure show the plot generated by the <code>plot(cars)</code> command in the Plots tab. As you can see, you can use options to zoom in/out and export the plot image as an image file or a PDF document. Plots made by R plots are Vector graphics and hence should be saved in vector formats like PNG and not bitmap formats like JPG.</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-7"></span>
+<img src="images/plots.png" alt="Plots Window with a Demo Plot" width="50%" />
+<p class="caption">
+FIGURE 2.3: Plots Window with a Demo Plot
+</p>
+</div>
+</div>
+<div id="packages" class="section level3">
+<h3><span class="header-section-number">2.2.7</span> Packages</h3>
+<p>The Packages tab shows you a list of all the packages installed on your system and their version number. You can check the checkbox next to the package name to manually load packages during your R session. You will also find icons for installing and updating packages. A search icon allows for searching among installed packages.</p>
+</div>
+<div id="help" class="section level3">
+<h3><span class="header-section-number">2.2.8</span> Help</h3>
+<p>As the name suggests, the Help tab can be used to find Help documentation on specific keywords. You can search for a keyword in the search field for looking at corresponding help documentation. If you write a help command in the console, then the output of that will also show in the Help tab. For example, if you type the command below (looking for help on “help”), you will get the help documentation as shown in figure below.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">help</span>(<span class="st">&quot;help&quot;</span>)</code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-9"></span>
+<img src="images/help.png" alt="Helo Window on 'Help'" width="80%" />
+<p class="caption">
+FIGURE 2.4: Helo Window on ‘Help’
+</p>
+</div>
+<!-- ## Helpful Menu Items and Keyboard Shortcuts -->
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>I once thought it was very clever to have this as my prompt “Sanjeev Says:”. I no longer think so.<a href="useful-features-of-rstudio.html#fnref1">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="introduction-to-r-and-rstudio.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="key-features-of-rrstudio-ecosystem.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook/js/app.min.js"></script>
+<script src="libs/gitbook/js/lunr.js"></script>
+<script src="libs/gitbook/js/plugin-search.js"></script>
+<script src="libs/gitbook/js/plugin-sharing.js"></script>
+<script src="libs/gitbook/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/clarifyR/AABookDown/edit/master/03-our-tools.Rmd",
+"text": "Edit"
+},
+"download": ["bookdown.pdf"],
+"toc": {
+"collapse": "none"
+},
+"toc_depth": 2
+});
+});
+</script>
+
+</body>
+
+</html>

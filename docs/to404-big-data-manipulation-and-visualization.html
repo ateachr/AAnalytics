@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Advanced Big Data Analytics for Business with R</title>
+  <meta name="description" content="A book to support Big Data classes by Sanjeev Kumar at Ross School of Business, Univ of Michigan.">
+  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Advanced Big Data Analytics for Business with R" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="A book to support Big Data classes by Sanjeev Kumar at Ross School of Business, Univ of Michigan." />
+  <meta name="github-repo" content="ateachr/ABDA4BwR" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Advanced Big Data Analytics for Business with R" />
+  
+  <meta name="twitter:description" content="A book to support Big Data classes by Sanjeev Kumar at Ross School of Business, Univ of Michigan." />
+  
+
+<meta name="author" content="Sanjeev Kumar">
+
+
+<meta name="date" content="2019-01-24">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="syllabi.html">
+<link rel="next" href="to414-advanced-analytics.html">
+<script src="libs/jquery/jquery.min.js"></script>
+<link href="libs/gitbook/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./index.html">Advanced Big Data Analytics</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Go Blue!</a></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="" data-path="who-is-this-book-for.html"><a href="who-is-this-book-for.html"><i class="fa fa-check"></i>Who Is This Book For?</a></li>
+<li class="chapter" data-level="" data-path="about-this-document.html"><a href="about-this-document.html"><i class="fa fa-check"></i>About This Document</a></li>
+<li class="chapter" data-level="" data-path="how-is-this-book-structured.html"><a href="how-is-this-book-structured.html"><i class="fa fa-check"></i>How is This Book Structured</a></li>
+<li class="chapter" data-level="" data-path="how-to-read-this-book.html"><a href="how-to-read-this-book.html"><i class="fa fa-check"></i>How to Read This Book</a></li>
+<li class="chapter" data-level="" data-path="is-this-book-suitable-for-you.html"><a href="is-this-book-suitable-for-you.html"><i class="fa fa-check"></i>Is This Book Suitable For You?</a></li>
+<li class="chapter" data-level="" data-path="acknowledgments.html"><a href="acknowledgments.html"><i class="fa fa-check"></i>Acknowledgments</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="about-the-author.html"><a href="about-the-author.html"><i class="fa fa-check"></i>About the Author</a></li>
+<li class="part"><span><b>I Getting Started</b></span></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="our-tools-r-rstudio.html"><a href="our-tools-r-rstudio.html"><i class="fa fa-check"></i><b>2</b> Our Tools: R, RStudio</a><ul>
+<li class="chapter" data-level="2.1" data-path="introduction-to-r-and-rstudio.html"><a href="introduction-to-r-and-rstudio.html"><i class="fa fa-check"></i><b>2.1</b> Introduction to R and RStudio</a></li>
+<li class="chapter" data-level="2.2" data-path="useful-features-of-rstudio.html"><a href="useful-features-of-rstudio.html"><i class="fa fa-check"></i><b>2.2</b> Useful Features of RStudio</a></li>
+<li class="chapter" data-level="2.3" data-path="key-features-of-rrstudio-ecosystem.html"><a href="key-features-of-rrstudio-ecosystem.html"><i class="fa fa-check"></i><b>2.3</b> Key Features of R/RStudio Ecosystem</a></li>
+<li class="chapter" data-level="2.4" data-path="common-issues-pitfalls-bugs-obstacles-and-their-solutions.html"><a href="common-issues-pitfalls-bugs-obstacles-and-their-solutions.html"><i class="fa fa-check"></i><b>2.4</b> Common Issues, Pitfalls, Bugs, Obstacles and Their Solutions</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="essential-r-language-elements.html"><a href="essential-r-language-elements.html"><i class="fa fa-check"></i><b>3</b> Essential R Language Elements</a><ul>
+<li class="chapter" data-level="3.1" data-path="doing-calculations-arithmatic-operators.html"><a href="doing-calculations-arithmatic-operators.html"><i class="fa fa-check"></i><b>3.1</b> Doing Calculations - Arithmatic Operators</a></li>
+<li class="chapter" data-level="3.2" data-path="variables.html"><a href="variables.html"><i class="fa fa-check"></i><b>3.2</b> Variables</a></li>
+<li class="chapter" data-level="3.3" data-path="variable-data-types.html"><a href="variable-data-types.html"><i class="fa fa-check"></i><b>3.3</b> Variable Data Types</a></li>
+<li class="chapter" data-level="3.4" data-path="logical-data.html"><a href="logical-data.html"><i class="fa fa-check"></i><b>3.4</b> Logical Data</a></li>
+<li class="chapter" data-level="3.5" data-path="logical-operators.html"><a href="logical-operators.html"><i class="fa fa-check"></i><b>3.5</b> Logical Operators</a></li>
+<li class="chapter" data-level="3.6" data-path="converting-between-data-types.html"><a href="converting-between-data-types.html"><i class="fa fa-check"></i><b>3.6</b> Converting Between Data Types</a></li>
+<li class="chapter" data-level="3.7" data-path="vectors.html"><a href="vectors.html"><i class="fa fa-check"></i><b>3.7</b> Vectors</a></li>
+<li class="chapter" data-level="3.8" data-path="factors.html"><a href="factors.html"><i class="fa fa-check"></i><b>3.8</b> Factors</a></li>
+<li class="chapter" data-level="3.9" data-path="using-built-in-functions.html"><a href="using-built-in-functions.html"><i class="fa fa-check"></i><b>3.9</b> Using Built-In Functions</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="r-markdown.html"><a href="r-markdown.html"><i class="fa fa-check"></i><b>4</b> R Markdown</a><ul>
+<li class="chapter" data-level="4.1" data-path="embedding-r-code-blocks-in-rmd-files.html"><a href="embedding-r-code-blocks-in-rmd-files.html"><i class="fa fa-check"></i><b>4.1</b> Embedding R Code Blocks in RMD Files</a></li>
+<li class="chapter" data-level="4.2" data-path="reproducibility-of-data-analysis.html"><a href="reproducibility-of-data-analysis.html"><i class="fa fa-check"></i><b>4.2</b> Reproducibility of Data Analysis</a></li>
+</ul></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="syllabi.html"><a href="syllabi.html"><i class="fa fa-check"></i><b>A</b> Syllabi</a><ul>
+<li class="chapter" data-level="A.1" data-path="to404-big-data-manipulation-and-visualization.html"><a href="to404-big-data-manipulation-and-visualization.html"><i class="fa fa-check"></i><b>A.1</b> TO404 Big Data Manipulation and Visualization</a></li>
+<li class="chapter" data-level="A.2" data-path="to414-advanced-analytics.html"><a href="to414-advanced-analytics.html"><i class="fa fa-check"></i><b>A.2</b> TO414 Advanced Analytics</a></li>
+<li class="chapter" data-level="A.3" data-path="to628-advanced-big-data-analytics.html"><a href="to628-advanced-big-data-analytics.html"><i class="fa fa-check"></i><b>A.3</b> TO628 Advanced Big Data Analytics</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Advanced Big Data Analytics for Business with R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="to404-big-data-manipulation-and-visualization" class="section level2">
+<h2><span class="header-section-number">A.1</span> TO404 Big Data Manipulation and Visualization</h2>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="syllabi.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="to414-advanced-analytics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook/js/app.min.js"></script>
+<script src="libs/gitbook/js/lunr.js"></script>
+<script src="libs/gitbook/js/plugin-search.js"></script>
+<script src="libs/gitbook/js/plugin-sharing.js"></script>
+<script src="libs/gitbook/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/clarifyR/AABookDown/edit/master/90-more.Rmd",
+"text": "Edit"
+},
+"download": ["bookdown.pdf"],
+"toc": {
+"collapse": "none"
+},
+"toc_depth": 2
+});
+});
+</script>
+
+</body>
+
+</html>

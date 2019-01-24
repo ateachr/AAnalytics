@@ -1,0 +1,62 @@
+
+# R Markdown
+
+
+We will make extensive use of RMarkdown files in the class. Markdown is a simple formatting syntax for authoring documents. RMarkdown allows you to create Markdown documents with embedded R code in them. RMarkdown documents can then be rendered in variety of output formats such as HTML, PDF, and MS Word documents. 
+
+RStudio streamlines the process of creating an RMarkdown file. Getting started is easy - in RStudio, go File -> New File -> R Markdown (or Alt-F-F-M). This will start a new RMD file for you. It needs some startup information to proceed first, as shown in the image below:
+
+```{r, fig.cap="Figure: RMD Startup Dialog", out.width='50%', fig.align='center', echo=FALSE}
+#knitr::include_graphics("images/RMDStart.png")
+```
+
+Title and Author are self explanatory. As the dialog suggests, you can choose HTML, PDF of Word as default output formats. PDF and Word require you to have a local installed version of TeX or MS-Word. For our class, I recommend that you use HTML as the default output - it is device and platform independent - and capable of handling variety of rich media. We will see later how to include dynamic content like animation and user interaction in these HTML files as well.
+
+Once you say OK, you will be taken to the default start page. This page has some content already to help you started. You should be able to see the preamble right on top that will generate your document headers and also control various options:
+
+```
+title: "Untitled"
+author: "Dr. Sanjeev Kumar"
+date: "May 5, 2018"
+output: html_document
+```
+
+You can make changes by either hand-editng the information above or by clicking the Edit Option icon (which looks like a gear) and choosign your options. For example, the preamble for one of my document looks like the following:
+
+
+```
+title: "How To Write RMarkdown Files"
+author: "Dr. Sanjeev Kumar"
+date: "May 5, 2016"
+output:
+  html_document: 
+    highlight: tango
+    number_sections: yes
+```
+
+Now you can go ahead and add content to your document. When you want to create the output,  click the `Knit` button and a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. We will see later in the document how to embed R code in RMD files.
+
+It is easy to format RMarkdown files and embed R code in them. For more details on using R Markdown see http://rmarkdown.rstudio.com.
+
+## Embedding R Code Blocks in RMD Files
+
+### Embedding Options
+
+- echo
+- eval
+- cache
+- label
+- fig.height/width
+
+### Embedding Code Blocks of Other Languages
+
+
+### Embedding in-line R Code
+
+
+## Reproducibility of Data Analysis
+
+A key advantage of using an RMD file is that the output contains both the R code and the output. That allows for a precise matching of what steps were performed to reach a specific output. Consider the example of a complex chart made in MS-Excel - you would be hard pressed to figure out what exactly was done to create that chart. Whether the chart has some data manipulation in it, whether the chart inadvertently includes a mistake - there is no transparency - and hence you are likely to not have much trust in the chart. In the case of RMD files on the other hand, the entire process of creating the chart is right there in the form of R commands. Anybody else with the same data and the same commands will reach exactly the same output. Your analysis can be reproduced by anybody else - imporving the reliability and trustworthiness of your analysis.
+
+We discussed "veracity" as one of the four Vs of Big Data. Doing data analytics in a way that is reproducible (e.g through an RMD file) goes a long way towards establishing confidence in the results of the analysis.
+

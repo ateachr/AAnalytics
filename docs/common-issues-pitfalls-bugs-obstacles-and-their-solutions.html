@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Advanced Big Data Analytics for Business with R</title>
+  <meta name="description" content="A book to support Big Data classes by Sanjeev Kumar at Ross School of Business, Univ of Michigan.">
+  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Advanced Big Data Analytics for Business with R" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="A book to support Big Data classes by Sanjeev Kumar at Ross School of Business, Univ of Michigan." />
+  <meta name="github-repo" content="ateachr/ABDA4BwR" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Advanced Big Data Analytics for Business with R" />
+  
+  <meta name="twitter:description" content="A book to support Big Data classes by Sanjeev Kumar at Ross School of Business, Univ of Michigan." />
+  
+
+<meta name="author" content="Sanjeev Kumar">
+
+
+<meta name="date" content="2019-01-24">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="key-features-of-rrstudio-ecosystem.html">
+<link rel="next" href="essential-r-language-elements.html">
+<script src="libs/jquery/jquery.min.js"></script>
+<link href="libs/gitbook/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./index.html">Advanced Big Data Analytics</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Go Blue!</a></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="" data-path="who-is-this-book-for.html"><a href="who-is-this-book-for.html"><i class="fa fa-check"></i>Who Is This Book For?</a></li>
+<li class="chapter" data-level="" data-path="about-this-document.html"><a href="about-this-document.html"><i class="fa fa-check"></i>About This Document</a></li>
+<li class="chapter" data-level="" data-path="how-is-this-book-structured.html"><a href="how-is-this-book-structured.html"><i class="fa fa-check"></i>How is This Book Structured</a></li>
+<li class="chapter" data-level="" data-path="how-to-read-this-book.html"><a href="how-to-read-this-book.html"><i class="fa fa-check"></i>How to Read This Book</a></li>
+<li class="chapter" data-level="" data-path="is-this-book-suitable-for-you.html"><a href="is-this-book-suitable-for-you.html"><i class="fa fa-check"></i>Is This Book Suitable For You?</a></li>
+<li class="chapter" data-level="" data-path="acknowledgments.html"><a href="acknowledgments.html"><i class="fa fa-check"></i>Acknowledgments</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="about-the-author.html"><a href="about-the-author.html"><i class="fa fa-check"></i>About the Author</a></li>
+<li class="part"><span><b>I Getting Started</b></span></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="our-tools-r-rstudio.html"><a href="our-tools-r-rstudio.html"><i class="fa fa-check"></i><b>2</b> Our Tools: R, RStudio</a><ul>
+<li class="chapter" data-level="2.1" data-path="introduction-to-r-and-rstudio.html"><a href="introduction-to-r-and-rstudio.html"><i class="fa fa-check"></i><b>2.1</b> Introduction to R and RStudio</a></li>
+<li class="chapter" data-level="2.2" data-path="useful-features-of-rstudio.html"><a href="useful-features-of-rstudio.html"><i class="fa fa-check"></i><b>2.2</b> Useful Features of RStudio</a></li>
+<li class="chapter" data-level="2.3" data-path="key-features-of-rrstudio-ecosystem.html"><a href="key-features-of-rrstudio-ecosystem.html"><i class="fa fa-check"></i><b>2.3</b> Key Features of R/RStudio Ecosystem</a></li>
+<li class="chapter" data-level="2.4" data-path="common-issues-pitfalls-bugs-obstacles-and-their-solutions.html"><a href="common-issues-pitfalls-bugs-obstacles-and-their-solutions.html"><i class="fa fa-check"></i><b>2.4</b> Common Issues, Pitfalls, Bugs, Obstacles and Their Solutions</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="essential-r-language-elements.html"><a href="essential-r-language-elements.html"><i class="fa fa-check"></i><b>3</b> Essential R Language Elements</a><ul>
+<li class="chapter" data-level="3.1" data-path="doing-calculations-arithmatic-operators.html"><a href="doing-calculations-arithmatic-operators.html"><i class="fa fa-check"></i><b>3.1</b> Doing Calculations - Arithmatic Operators</a></li>
+<li class="chapter" data-level="3.2" data-path="variables.html"><a href="variables.html"><i class="fa fa-check"></i><b>3.2</b> Variables</a></li>
+<li class="chapter" data-level="3.3" data-path="variable-data-types.html"><a href="variable-data-types.html"><i class="fa fa-check"></i><b>3.3</b> Variable Data Types</a></li>
+<li class="chapter" data-level="3.4" data-path="logical-data.html"><a href="logical-data.html"><i class="fa fa-check"></i><b>3.4</b> Logical Data</a></li>
+<li class="chapter" data-level="3.5" data-path="logical-operators.html"><a href="logical-operators.html"><i class="fa fa-check"></i><b>3.5</b> Logical Operators</a></li>
+<li class="chapter" data-level="3.6" data-path="converting-between-data-types.html"><a href="converting-between-data-types.html"><i class="fa fa-check"></i><b>3.6</b> Converting Between Data Types</a></li>
+<li class="chapter" data-level="3.7" data-path="vectors.html"><a href="vectors.html"><i class="fa fa-check"></i><b>3.7</b> Vectors</a></li>
+<li class="chapter" data-level="3.8" data-path="factors.html"><a href="factors.html"><i class="fa fa-check"></i><b>3.8</b> Factors</a></li>
+<li class="chapter" data-level="3.9" data-path="using-built-in-functions.html"><a href="using-built-in-functions.html"><i class="fa fa-check"></i><b>3.9</b> Using Built-In Functions</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="r-markdown.html"><a href="r-markdown.html"><i class="fa fa-check"></i><b>4</b> R Markdown</a><ul>
+<li class="chapter" data-level="4.1" data-path="embedding-r-code-blocks-in-rmd-files.html"><a href="embedding-r-code-blocks-in-rmd-files.html"><i class="fa fa-check"></i><b>4.1</b> Embedding R Code Blocks in RMD Files</a></li>
+<li class="chapter" data-level="4.2" data-path="reproducibility-of-data-analysis.html"><a href="reproducibility-of-data-analysis.html"><i class="fa fa-check"></i><b>4.2</b> Reproducibility of Data Analysis</a></li>
+</ul></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="syllabi.html"><a href="syllabi.html"><i class="fa fa-check"></i><b>A</b> Syllabi</a><ul>
+<li class="chapter" data-level="A.1" data-path="to404-big-data-manipulation-and-visualization.html"><a href="to404-big-data-manipulation-and-visualization.html"><i class="fa fa-check"></i><b>A.1</b> TO404 Big Data Manipulation and Visualization</a></li>
+<li class="chapter" data-level="A.2" data-path="to414-advanced-analytics.html"><a href="to414-advanced-analytics.html"><i class="fa fa-check"></i><b>A.2</b> TO414 Advanced Analytics</a></li>
+<li class="chapter" data-level="A.3" data-path="to628-advanced-big-data-analytics.html"><a href="to628-advanced-big-data-analytics.html"><i class="fa fa-check"></i><b>A.3</b> TO628 Advanced Big Data Analytics</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Advanced Big Data Analytics for Business with R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="common-issues-pitfalls-bugs-obstacles-and-their-solutions" class="section level2">
+<h2><span class="header-section-number">2.4</span> Common Issues, Pitfalls, Bugs, Obstacles and Their Solutions</h2>
+<p>This section is my master list of common issues that students encounter when they start working with R. You may want to not read this in full right now - treat this as a reference section. When you run into an issue, come by here and see if I have a solution for you.</p>
+<div id="i-have-an-older-r-installtion.-how-do-i-upgrade-it" class="section level3">
+<h3><span class="header-section-number">2.4.1</span> I have an older R installtion. How do I upgrade it?</h3>
+<p>You might have an old, not updated version of R in your machine. You can check the current version of your R by running the <code>version</code> command. If you have an older version and if you are in a Windows machine, then upgrading your R installation is easy with the <code>installr</code> package. The <code>installr</code> package has the handy <code>updateR</code> command that will automatically update your R installation to the latest one. A sample code to accomplish this is below:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#Sample code, not being evaluated here</span>
+<span class="kw">install.packages</span>(<span class="st">&quot;installr&quot;</span>) <span class="co"># install the installr package </span>
+<span class="kw">library</span>(installr)
+<span class="kw">updateR</span>() <span class="co"># updating your R version</span>
+version <span class="co"># command for checking your current R version</span></code></pre></div>
+<p>If you happen to be in a Mac or Linux machine, then you would want to download the current version of R and install. This process is similar to installing a fresh new installation of R as discussion in a previous section.</p>
+</div>
+<div id="help---i-am-not-being-able-to-install-any-packages" class="section level3">
+<h3><span class="header-section-number">2.4.2</span> Help - I am not being able to install any packages!</h3>
+<p>If you are unable to install R packages, there are a few things we can try.<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> First thing to check would be your anti-virus software. Several anti-virus software balk at allowing R to perform tasks that may be interpreted as a security risk (for example - downloading and installing packages from the Internet). You can try to work around this by disabling/uninstalling your anti-virus or adding R to the exceptions list in the anti-virus.</p>
+<p>You may also want to check whether you have administrator access in the machine you are working on. Several essential tasks in R require the user to have administrator access.</p>
+<p>Lastly, R may be attempting to install packages into a directory that it does not have write permissions on. This can sometimes happen if you are on a computer on a network with mapped drives. You can work around this problem by asking R to install your packages in a safe, editable directory where you have write access. R installs all packages in a library directory - you can find out the current location of the library directory with the <code>.libPaths</code> command. You can use the <code>.libPaths</code> command to then add a directory location as your personal library location so that R can then install packages in that directory. A sample code to accomplish this is shown below:<a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">.libPaths</span>() <span class="co">#Shows the current library path</span></code></pre></div>
+<pre><code>## [1] &quot;/Library/Frameworks/R.framework/Versions/3.4/Resources/library&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># You can add your own library folder to the path</span>
+<span class="co">#libPaths( c( .libPaths(), &quot;C:/Whatever/Whatever...&quot;) )</span></code></pre></div>
+</div>
+<div id="why-is-the-edit-command-not-working-for-me" class="section level3">
+<h3><span class="header-section-number">2.4.3</span> Why is the edit command not working for me?</h3>
+<p>One of the first R commands that gives trouble is the <code>edit</code> command. As the name suggests, <code>edit</code> is used for editing data - typically it shows the data to be edited in a table format with editable cells. This specific command (and its cousin, the <code>fix</code> command) seems to be very sensitive to the keyboard layouts, especially on Apple machines. This problem is hardware oriented and may prove difficult to solve. I usually recommend to ignore these two commands and take care of your data editing needs using alternative methods. If you were using <code>edit</code> for only viewing the data, then <code>View</code> is a good alternative for that.</p>
+
+</div>
+</div>
+<!-- </div> -->
+<div class="footnotes">
+<hr />
+<ol start="2">
+<li id="fn2"><p>I am not going to insult your intelligence by asking you to make sure that you have a live Internet connection!<a href="common-issues-pitfalls-bugs-obstacles-and-their-solutions.html#fnref2">↩</a></p></li>
+<li id="fn3"><p>Last command commented as C:/Whatever does not exist obviously - so would have resulted in an error - hence it is commented out.<a href="common-issues-pitfalls-bugs-obstacles-and-their-solutions.html#fnref3">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="key-features-of-rrstudio-ecosystem.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="essential-r-language-elements.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook/js/app.min.js"></script>
+<script src="libs/gitbook/js/lunr.js"></script>
+<script src="libs/gitbook/js/plugin-search.js"></script>
+<script src="libs/gitbook/js/plugin-sharing.js"></script>
+<script src="libs/gitbook/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/clarifyR/AABookDown/edit/master/03-our-tools.Rmd",
+"text": "Edit"
+},
+"download": ["bookdown.pdf"],
+"toc": {
+"collapse": "none"
+},
+"toc_depth": 2
+});
+});
+</script>
+
+</body>
+
+</html>
